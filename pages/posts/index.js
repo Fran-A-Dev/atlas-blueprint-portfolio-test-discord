@@ -13,7 +13,7 @@ import {
   SEO,
   NavigationMenu,
 } from 'components';
-import { getNextStaticProps } from '@faustwp/core';
+import { getWordPressProps } from '@faustwp/core';
 import { pageTitle } from 'utilities';
 import { BlogInfoFragment } from 'fragments/GeneralSettings';
 import appConfig from 'app.config';
@@ -107,7 +107,7 @@ Page.variables = () => {
 };
 
 export async function getStaticProps(context) {
-  return getNextStaticProps(context, {
+  return getWordPressProps(context, {
     Page,
     revalidate: 10,
   });
